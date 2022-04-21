@@ -1,0 +1,7 @@
+name: BeeHubCore
+version: '${project.version}'
+main: net.acticraft.plugins.beehubcore.BeeHubCore
+api-version: 1.18
+authors: [ PxLib ]
+commands:
+  gamemenu:
