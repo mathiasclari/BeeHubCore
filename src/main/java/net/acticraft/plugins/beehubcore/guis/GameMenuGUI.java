@@ -1,5 +1,6 @@
 package net.acticraft.plugins.beehubcore.guis;
 
+import net.acticraft.plugin.api.beeapi.bungeesendplayer.Bungee;
 import net.md_5.bungee.api.ChatColor;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
@@ -147,7 +148,7 @@ public class GameMenuGUI implements CommandExecutor, Listener {
             if (event.getCurrentItem().getType() == Material.GRASS_BLOCK) {
                 if (event.getClick().equals(ClickType.RIGHT) || event.getClick().equals(ClickType.LEFT)) {
                     ItemMeta meta = event.getCurrentItem().getItemMeta();
-                    //Bungee.sendPlayerToServer((Player) event.getWhoClicked(), "skyblock");
+                    Bungee.sendPlayerToServer((Player) event.getWhoClicked(), "skyblock");
                     event.getWhoClicked().closeInventory();
                 } else {
                     event.setCancelled(true);

@@ -12,10 +12,10 @@ public final class BeeHubCore extends JavaPlugin {
     public void onEnable() {
         getServer().getPluginManager().registerEvents(new Events(), this);
         getServer().getPluginManager().registerEvents(new JoinMessageListener(), this);
-       /* getServer().getPluginManager().registerEvents(new GameMenuGUI(), this);
+        getServer().getPluginManager().registerEvents(new GameMenuGUI(), this);
 
         getCommand("gamemenu").setExecutor(new GameMenuGUI());
-*/
+
 
     }
 
