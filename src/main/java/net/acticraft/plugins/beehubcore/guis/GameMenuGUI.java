@@ -155,10 +155,10 @@ public class GameMenuGUI implements CommandExecutor, Listener {
                 }
             }
 
-            if (event.getCurrentItem().getType() == Material.RED_STAINED_GLASS) {
+            if (event.getCurrentItem().getType() == Material.HONEYCOMB_BLOCK) {
                 if (event.getClick().equals(ClickType.RIGHT) || event.getClick().equals(ClickType.LEFT)) {
                     ItemMeta meta = event.getCurrentItem().getItemMeta();
-                    event.getWhoClicked().sendMessage(ChatColor.of("#78B5DA") + "You didnt unlocked this boat yet!");
+                    Bungee.sendPlayerToServer((Player) event.getWhoClicked(), "kitpvp");
                     event.getWhoClicked().closeInventory();
                 } else {
                     event.setCancelled(true);
