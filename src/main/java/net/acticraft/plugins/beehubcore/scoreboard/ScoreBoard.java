@@ -56,9 +56,8 @@ public class ScoreBoard implements Listener {
     private void updateBoard(BeeScoreboard lobbysb) {
         lobbysb.updateLines(
                 "",
-                ChatColor.of("#738291")+""+ChatColor.BOLD+"» "+ChatColor.of("#F28C28")+""+ChatColor.BOLD+"Name: " + ChatColor.of("#FAD5A5")+lobbysb.getPlayer().getName(),
-                "",
-                ChatColor.of("#738291")+""+ChatColor.BOLD+"» "+ChatColor.of("#F28C28")+""+ChatColor.BOLD+"Ping: " + ChatColor.of("#FAD5A5")+lobbysb.getPlayer().getPing(),
+                ChatColor.of("#738291")+""+ChatColor.BOLD+"| "+ChatColor.of("#F28C28")+""+ChatColor.BOLD+"Name: " + ChatColor.of("#FAD5A5")+lobbysb.getPlayer().getName(),
+                ChatColor.of("#738291")+""+ChatColor.BOLD+"| "+ChatColor.of("#F28C28")+""+ChatColor.BOLD+"Ping: " + ChatColor.of("#FAD5A5")+lobbysb.getPlayer().getPing(),
                 "",
                 ChatColor.of("#FFBF00")+""+ChatColor.BOLD + "discord.gg/mcbee"
 

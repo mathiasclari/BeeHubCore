@@ -1,6 +1,7 @@
 package net.acticraft.plugins.beehubcore.events;
 
 import org.bukkit.Bukkit;
+import org.bukkit.Difficulty;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -26,6 +27,7 @@ public class Events implements Listener {
         e.getPlayer().setLevel(2022);
         e.getPlayer().setHealthScale(10);
         e.getPlayer().setFoodLevel(20);
+        e.getPlayer().getWorld().setDifficulty(Difficulty.PEACEFUL);
         p.setInvulnerable(true);
 
     }
