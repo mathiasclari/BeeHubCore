@@ -4,19 +4,25 @@ import net.acticraft.plugin.api.beeapi.scoreboard.BeeScoreboard;
 import net.acticraft.plugins.beehubcore.BeeHubCore;
 import net.md_5.bungee.api.ChatColor;
 import org.bukkit.Bukkit;
-import org.bukkit.Statistic;
+import org.bukkit.configuration.ConfigurationSection;
+import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
+
 public class ScoreBoard implements Listener {
     private final Map<UUID, BeeScoreboard> boards = new HashMap<>();
+
+
 
     public ScoreBoard() {
         Bukkit.getServer().getScheduler().runTaskTimer(BeeHubCore.getInstance(), () -> {
@@ -59,6 +65,14 @@ public class ScoreBoard implements Listener {
                 ChatColor.of("#738291")+""+ChatColor.BOLD+"| "+ChatColor.of("#F28C28")+""+ChatColor.BOLD+"Name: " + ChatColor.of("#FAD5A5")+lobbysb.getPlayer().getName(),
                 ChatColor.of("#738291")+""+ChatColor.BOLD+"| "+ChatColor.of("#F28C28")+""+ChatColor.BOLD+"Ping: " + ChatColor.of("#FAD5A5")+lobbysb.getPlayer().getPing(),
                 "",
+                ChatColor.of("#738291")+""+ChatColor.BOLD+"| "+ChatColor.of("#F28C28")+""+ChatColor.BOLD+"Flight: " + ChatColor.of("#FAD5A5")+ (lobbysb.getPlayer().isFlying() ? "Yes" : "No"),
+                "",
+                ChatColor.of("#738291")+""+ChatColor.BOLD+"| "+ChatColor.of("#F28C28")+""+ChatColor.BOLD+"Server: " + ChatColor.of("#FAD5A5")+ BeeHubCore.getInstance().serverid,
+                ChatColor.of("#738291")+""+ChatColor.BOLD+"| "+ChatColor.of("#F28C28")+""+ChatColor.BOLD+"Lobby: " + ChatColor.of("#FAD5A5")+BeeHubCore.getInstance().servername,
+                "",
+                ChatColor.of("#738291")+""+ChatColor.BOLD+"| "+ChatColor.of("#F28C28")+""+ChatColor.BOLD+"Date: " + ChatColor.of("#FAD5A5")+ new SimpleDateFormat("dd/MM/yyyy").format(new Date()),
+                ChatColor.of("#738291")+""+ChatColor.BOLD+"| "+ChatColor.of("#F28C28")+""+ChatColor.BOLD+"First join: " + ChatColor.of("#FAD5A5")+ new SimpleDateFormat("dd/MM/yyyy").format(new Date(lobbysb.getPlayer().getFirstPlayed())),
+                "",
                 ChatColor.of("#FFBF00")+""+ChatColor.BOLD + "discord.gg/mcbee"
 
 
@@ -66,4 +80,6 @@ public class ScoreBoard implements Listener {
 
 
     }
+
 }
+

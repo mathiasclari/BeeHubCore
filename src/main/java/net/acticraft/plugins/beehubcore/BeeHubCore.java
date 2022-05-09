@@ -7,14 +7,21 @@ import net.acticraft.plugins.beehubcore.events.Events;
 import net.acticraft.plugins.beehubcore.guis.GameMenuGUI;
 import net.acticraft.plugins.beehubcore.playerlisteners.JoinMessageListener;
 import net.acticraft.plugins.beehubcore.scoreboard.ScoreBoard;
+import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class BeeHubCore extends JavaPlugin {
     private static BeeHubCore instance;
 
+    private final YamlConfiguration conf = new YamlConfiguration();
+    public String servername = getConfig().getString("servername");
+    public String serverid = getConfig().getString("serverid");
+
+
     @Override
     public void onEnable() {
         instance = this;
+        saveDefaultConfig();
 
         getServer().getPluginManager().registerEvents(new Events(), this);
         getServer().getPluginManager().registerEvents(new JoinMessageListener(), this);
@@ -27,12 +34,10 @@ public final class BeeHubCore extends JavaPlugin {
 
 
 
-
     }
 
     @Override
     public void onDisable() {
-        // Plugin shutdown logic
     }
     public static BeeHubCore getInstance() {
         return instance;

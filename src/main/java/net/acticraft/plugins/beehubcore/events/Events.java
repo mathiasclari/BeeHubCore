@@ -1,5 +1,6 @@
 package net.acticraft.plugins.beehubcore.events;
 
+import net.md_5.bungee.api.ChatColor;
 import org.bukkit.Bukkit;
 import org.bukkit.Difficulty;
 import org.bukkit.Material;
@@ -9,8 +10,12 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.player.*;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
 
 public class Events implements Listener {
+
+    ItemStack menu = new ItemStack(Material.FIREWORK_STAR, 1);
 
 
     @EventHandler
@@ -84,6 +89,20 @@ public class Events implements Listener {
     public void PlayerEvent1(PlayerPortalEvent e) {
         Player p = e.getPlayer();
         e.setCancelled(true);
+    }
+
+    @EventHandler
+    public void PlayerGetMenu(PlayerJoinEvent e) {
+        Player p = e.getPlayer();
+        if(!p.getInventory().contains(Material.FIREWORK_STAR)) {
+            ItemMeta menu_meta = menu.getItemMeta();
+            menu_meta.setDisplayName(ChatColor.of("#F1981E") + "" + ChatColor.BOLD + "GAME SELECTOR");
+            menu.setItemMeta(menu_meta);
+            e.getPlayer().getInventory().addItem(menu);
+        }else {
+
+        }
+
     }
 
 }
