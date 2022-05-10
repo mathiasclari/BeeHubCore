@@ -12,6 +12,7 @@ import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.player.*;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.util.Vector;
 
 public class Events implements Listener {
 
@@ -33,6 +34,7 @@ public class Events implements Listener {
         e.getPlayer().setHealthScale(10);
         e.getPlayer().setFoodLevel(20);
         e.getPlayer().getWorld().setDifficulty(Difficulty.PEACEFUL);
+        e.getPlayer().setVelocity(Vector.getRandom().multiply(1.5));
         p.setInvulnerable(true);
 
     }

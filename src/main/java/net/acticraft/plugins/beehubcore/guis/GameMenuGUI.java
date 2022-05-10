@@ -94,7 +94,7 @@ public class GameMenuGUI implements CommandExecutor, Listener {
                 ArrayList<String> game1_lore = new ArrayList<>();
                 game1_lore.add(ChatColor.of("#E8977F") +""+ChatColor.BOLD+ "GAMES:");
                 game1_lore.add(ChatColor.of("#FAD5A5") + "SteveKart");
-                game1_lore.add(ChatColor.of("#FAD5A5") + "TheMiningDead");
+                game1_lore.add(ChatColor.of("#FAD5A5") + "DyingCraft");
                 game1_lore.add(ChatColor.of("#FAD5A5") + "Mineopoly");
                 game1_lore.add(ChatColor.of("#FAD5A5") + "MineWars");
                 game1_lore.add(ChatColor.of("#FAD5A5") + "MineEmpires");
