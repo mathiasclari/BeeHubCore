@@ -1,11 +1,9 @@
 package net.acticraft.plugins.beehubcore.scoreboard;
 
-import net.acticraft.plugin.api.beeapi.scoreboard.BeeScoreboard;
+import fun.mcbee.api.honeyapi.ScoreBoard.BeeScoreboard;
 import net.acticraft.plugins.beehubcore.BeeHubCore;
 import net.md_5.bungee.api.ChatColor;
 import org.bukkit.Bukkit;
-import org.bukkit.configuration.ConfigurationSection;
-import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -69,9 +67,6 @@ public class ScoreBoard implements Listener {
                 "",
                 ChatColor.of("#738291")+""+ChatColor.BOLD+"| "+ChatColor.of("#F28C28")+""+ChatColor.BOLD+"Server: " + ChatColor.of("#FAD5A5")+ BeeHubCore.getInstance().serverid,
                 ChatColor.of("#738291")+""+ChatColor.BOLD+"| "+ChatColor.of("#F28C28")+""+ChatColor.BOLD+"Lobby: " + ChatColor.of("#FAD5A5")+BeeHubCore.getInstance().servername,
-                "",
-                ChatColor.of("#738291")+""+ChatColor.BOLD+"| "+ChatColor.of("#F28C28")+""+ChatColor.BOLD+"Date: " + ChatColor.of("#FAD5A5")+ new SimpleDateFormat("dd/MM/yyyy").format(new Date()),
-                ChatColor.of("#738291")+""+ChatColor.BOLD+"| "+ChatColor.of("#F28C28")+""+ChatColor.BOLD+"First join: " + ChatColor.of("#FAD5A5")+ new SimpleDateFormat("dd/MM/yyyy").format(new Date(lobbysb.getPlayer().getFirstPlayed())),
                 "",
                 ChatColor.of("#FFBF00")+""+ChatColor.BOLD + "discord.gg/mcbee"
 

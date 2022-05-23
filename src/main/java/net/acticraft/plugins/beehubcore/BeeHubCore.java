@@ -1,7 +1,5 @@
 package net.acticraft.plugins.beehubcore;
 
-import net.acticraft.plugin.api.beeapi.BeeAPI;
-import net.acticraft.plugin.api.beeapi.mysql.BeeMySQL;
 import net.acticraft.plugins.beehubcore.BlockReplaceListener.BlockReplace;
 import net.acticraft.plugins.beehubcore.events.Events;
 import net.acticraft.plugins.beehubcore.guis.GameMenuGUI;

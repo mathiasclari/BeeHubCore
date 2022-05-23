@@ -1,9 +1,8 @@
 package net.acticraft.plugins.beehubcore.events;
 
 import net.md_5.bungee.api.ChatColor;
-import org.bukkit.Bukkit;
-import org.bukkit.Difficulty;
-import org.bukkit.Material;
+import org.bukkit.*;
+import org.bukkit.block.data.BlockData;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -16,7 +15,7 @@ import org.bukkit.util.Vector;
 
 public class Events implements Listener {
 
-    ItemStack menu = new ItemStack(Material.FIREWORK_STAR, 1);
+    ItemStack menu = new ItemStack(Material.HEART_OF_THE_SEA, 1);
 
 
     @EventHandler
@@ -41,7 +40,7 @@ public class Events implements Listener {
 
     @EventHandler
     public void DropItem(PlayerDropItemEvent e) {
-        if(e.getItemDrop().getItemStack().getType().equals(Material.FIREWORK_STAR)) {
+        if(e.getItemDrop().getItemStack().getType().equals(Material.HEART_OF_THE_SEA)) {
             e.setCancelled(true);
             e.getPlayer().sendMessage("You can not drop this item!");
         }
@@ -51,8 +50,8 @@ public class Events implements Listener {
     public void ServerSwitch(PlayerInteractEvent e) {
         Player p = e.getPlayer();
         if(e.getAction() == Action.RIGHT_CLICK_AIR || e.getAction() == Action.RIGHT_CLICK_BLOCK) {
-            if(p.getItemInHand().getType() == Material.FIREWORK_STAR) {
-
+            if(p.getItemInHand().getType() == Material.HEART_OF_THE_SEA) {
+                e.getPlayer().playSound(p.getLocation(), Sound.BLOCK_AMETHYST_CLUSTER_PLACE, 1, 1);
                 Bukkit.dispatchCommand(p,"gamemenu");
 
             }
@@ -63,9 +62,9 @@ public class Events implements Listener {
     @EventHandler
     public void PlayerVoid(PlayerMoveEvent e) {
         Player p = e.getPlayer();
-        if(e.getPlayer().getLocation().getY() < 53) {
+        if(e.getPlayer().getLocation().getY() < 52) {
             p.teleport(p.getWorld().getSpawnLocation());
-            p.sendMessage("You fell out of the world!");
+            p.sendMessage("You has been teleported to the spawn!");
         }
     }
 
@@ -96,7 +95,7 @@ public class Events implements Listener {
     @EventHandler
     public void PlayerGetMenu(PlayerJoinEvent e) {
         Player p = e.getPlayer();
-        if(!p.getInventory().contains(Material.FIREWORK_STAR)) {
+        if(!p.getInventory().contains(Material.HEART_OF_THE_SEA)) {
             ItemMeta menu_meta = menu.getItemMeta();
             menu_meta.setDisplayName(ChatColor.of("#F1981E") + "" + ChatColor.BOLD + "GAME SELECTOR");
             menu.setItemMeta(menu_meta);
@@ -105,6 +104,15 @@ public class Events implements Listener {
 
         }
 
+    }
+
+    @EventHandler
+    public void PlayerMovement(PlayerMoveEvent e) {
+        Player p = e.getPlayer();
+        if(p.hasPermission("beehub.admin")) {
+            Location loc = p.getLocation();
+            e.getPlayer().spawnParticle(Particle.BUBBLE_POP, loc.getX(),loc.getY(),loc.getZ(), 3, 0, -0.5, 0, 0);
+        }
     }
 
 }

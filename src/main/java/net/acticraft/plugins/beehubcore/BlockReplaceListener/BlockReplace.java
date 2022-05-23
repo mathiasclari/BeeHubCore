@@ -10,7 +10,7 @@ import org.bukkit.event.block.BlockBreakEvent;
 import java.util.Arrays;
 import java.util.List;
 
-import static net.acticraft.plugin.api.beeapi.blockreplaceengine.BlockReplacementEngine.checkBlockReplace;
+import static fun.mcbee.api.honeyapi.BlockReplaceEngine.BlockReplacementEngine.checkBlockReplace;
 
 public class BlockReplace implements Listener {
     List<String> resourceWorlds = Arrays.asList("farm_world", "forest_world", "mountain_world", "desert_world", "island_world", "skyblock_world","world");
