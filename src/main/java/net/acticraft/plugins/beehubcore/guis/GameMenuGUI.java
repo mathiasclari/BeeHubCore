@@ -57,6 +57,8 @@ public class GameMenuGUI implements CommandExecutor, Listener {
                 game1_lore.add(ChatColor.of("#FAD5A5") + "Survival");
                 game1_lore.add(ChatColor.of("#FAD5A5") + "SkyBlock");
                 game1_lore.add(ChatColor.of("#FAD5A5") + "Realms");
+                game1_lore.add(ChatColor.of("#FAD5A5") + "SkyTowny");
+                game1_lore.add(ChatColor.of("#FAD5A5") + "Towny");
                 smp_meta.setLore(game1_lore);
                 smp.setItemMeta(smp_meta);
 
@@ -229,7 +231,7 @@ public class GameMenuGUI implements CommandExecutor, Listener {
             if (event.getCurrentItem().getType() == Material.GRASS_BLOCK) {
                 if (event.getClick().equals(ClickType.RIGHT) || event.getClick().equals(ClickType.LEFT)) {
                     ItemMeta meta = event.getCurrentItem().getItemMeta();
-                    event.getWhoClicked().closeInventory();
+                    Bukkit.dispatchCommand(event.getWhoClicked(),"survivalc");
                 } else {
                     event.setCancelled(true);
                 }}

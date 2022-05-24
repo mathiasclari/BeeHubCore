@@ -3,6 +3,7 @@ package net.acticraft.plugins.beehubcore;
 import net.acticraft.plugins.beehubcore.BlockReplaceListener.BlockReplace;
 import net.acticraft.plugins.beehubcore.events.Events;
 import net.acticraft.plugins.beehubcore.guis.GameMenuGUI;
+import net.acticraft.plugins.beehubcore.guis.SMPCategory;
 import net.acticraft.plugins.beehubcore.playerlisteners.JoinMessageListener;
 import net.acticraft.plugins.beehubcore.scoreboard.ScoreBoard;
 import org.bukkit.configuration.file.YamlConfiguration;
@@ -26,8 +27,10 @@ public final class BeeHubCore extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new GameMenuGUI(), this);
         getServer().getPluginManager().registerEvents(new ScoreBoard(), this);
         getServer().getPluginManager().registerEvents(new BlockReplace(), this);
+        getServer().getPluginManager().registerEvents(new SMPCategory(), this);
 
         getCommand("gamemenu").setExecutor(new GameMenuGUI());
+        getCommand("survivalc").setExecutor(new SMPCategory());
 
 
 
