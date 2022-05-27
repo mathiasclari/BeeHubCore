@@ -43,7 +43,7 @@ public class SMPCategory implements CommandExecutor, Listener {
             ItemMeta survival_meta = survival.getItemMeta();
             survival_meta.setDisplayName(ChatColor.of("#F1981E") + ""+ChatColor.BOLD + "SURVIVAL");
             ArrayList<String> survival_lore = new ArrayList<>();
-            survival_lore.add(ChatColor.of("#738291") + "Custom open world survival world.");
+            survival_lore.add(ChatColor.of("#738291") + "Open world survival world.");
             survival_lore.add(ChatColor.of("#738291") + "World Size 10k x 10k");
             survival_meta.setLore(survival_lore);
             survival.setItemMeta(survival_meta);
@@ -64,10 +64,10 @@ public class SMPCategory implements CommandExecutor, Listener {
             realms.setItemMeta(realms_meta);
 
             ItemMeta skytowny_meta = skytowny.getItemMeta();
-            skytowny_meta.setDisplayName(ChatColor.of("#F1981E") + ""+ChatColor.BOLD + "SKYTOWNY");
+            skytowny_meta.setDisplayName(ChatColor.of("#F1981E") + ""+ChatColor.BOLD + "Survival 2");
             ArrayList<String> skytowny_lore = new ArrayList<>();
-            skytowny_lore.add(ChatColor.of("#738291") + "Custom sky towny world.");
-            skytowny_lore.add(ChatColor.of("#738291") + "Leveled mobs.");
+            skytowny_lore.add(ChatColor.of("#738291") + "Custom resourcepack");
+            skytowny_lore.add(ChatColor.of("#738291") + "Custom world generator");
 
             skyblock_meta.setLore(skytowny_lore);
             skytowny.setItemMeta(skytowny_meta);
@@ -89,6 +89,10 @@ public class SMPCategory implements CommandExecutor, Listener {
             ItemMeta none2_meta = none2.getItemMeta();
             none2_meta.setDisplayName(ChatColor.of("#F1981E") +""+ChatColor.BOLD + "");
             none2.setItemMeta(none_meta);
+
+            ItemMeta back_meta = back.getItemMeta();
+            back_meta.setDisplayName(ChatColor.of("#F1981E") +""+ChatColor.BOLD + "BACK");
+            back.setItemMeta(back_meta);
 
 
             //Design
@@ -164,7 +168,7 @@ public class SMPCategory implements CommandExecutor, Listener {
             if (event.getCurrentItem().getType() == Material.GOLDEN_PICKAXE) {
                 if (event.getClick().equals(ClickType.RIGHT) || event.getClick().equals(ClickType.LEFT)) {
                     ItemMeta meta = event.getCurrentItem().getItemMeta();
-                    Bungee.sendPlayerToServer((Player) event.getWhoClicked(), "skytowny");
+                    Bungee.sendPlayerToServer((Player) event.getWhoClicked(), "survival2");
                 } else {
                     event.setCancelled(true);
                 }
@@ -173,6 +177,7 @@ public class SMPCategory implements CommandExecutor, Listener {
             if (event.getCurrentItem().getType() == Material.DIAMOND_PICKAXE) {
                 if (event.getClick().equals(ClickType.RIGHT) || event.getClick().equals(ClickType.LEFT)) {
                     ItemMeta meta = event.getCurrentItem().getItemMeta();
+
                     Bungee.sendPlayerToServer((Player) event.getWhoClicked(), "towny");
                 } else {
                     event.setCancelled(true);

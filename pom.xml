@@ -61,10 +61,6 @@
             <id>sonatype</id>
             <url>https://oss.sonatype.org/content/groups/public/</url>
         </repository>
-        <repository>
-            <id>maven-releases</id>
-            <url>http://jernejtdo.si:8081/repository/maven-releases/</url>
-        </repository>
     </repositories>
 
     <dependencies>

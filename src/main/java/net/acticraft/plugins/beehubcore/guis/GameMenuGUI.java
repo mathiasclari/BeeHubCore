@@ -228,6 +228,8 @@ public class GameMenuGUI implements CommandExecutor, Listener {
             }
 
 
+
+
             if (event.getCurrentItem().getType() == Material.GRASS_BLOCK) {
                 if (event.getClick().equals(ClickType.RIGHT) || event.getClick().equals(ClickType.LEFT)) {
                     ItemMeta meta = event.getCurrentItem().getItemMeta();

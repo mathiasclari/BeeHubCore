@@ -3,6 +3,7 @@ version: '${project.version}'
 main: net.acticraft.plugins.beehubcore.BeeHubCore
 api-version: 1.18
 authors: [ PxLib ]
+depend: [HoneyAPI]
 commands:
   gamemenu:
   survivalc:
