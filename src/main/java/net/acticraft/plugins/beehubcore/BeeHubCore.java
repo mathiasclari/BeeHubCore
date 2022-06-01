@@ -29,6 +29,7 @@ public final class BeeHubCore extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new ScoreBoard(), this);
         getServer().getPluginManager().registerEvents(new BlockReplace(), this);
         getServer().getPluginManager().registerEvents(new SMPCategory(), this);
+        getServer().getPluginManager().registerEvents(new Tempmenu(), this);
 
         //getCommand("gamemenu").setExecutor(new GameMenuGUI());
         //getCommand("survivalc").setExecutor(new SMPCategory());

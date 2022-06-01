@@ -62,7 +62,7 @@ public class Events implements Listener {
     @EventHandler
     public void PlayerVoid(PlayerMoveEvent e) {
         Player p = e.getPlayer();
-        if(e.getPlayer().getLocation().getY() < 52) {
+        if(e.getPlayer().getLocation().getY() < 32) {
             p.teleport(p.getWorld().getSpawnLocation());
             p.sendMessage("You has been teleported to the spawn!");
         }

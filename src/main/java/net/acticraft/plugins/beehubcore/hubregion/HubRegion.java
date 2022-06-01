@@ -14,7 +14,7 @@ import java.util.List;
 
 public class HubRegion implements Listener {
     Location loc1 = new Location(Bukkit.getWorld("PartyRunner"), 193, 28, -369);
-    Location loc2 = new Location(Bukkit.getWorld("PartyRunner"), -503, 250, -369);
+    Location loc2 = new Location(Bukkit.getWorld("PartyRunner"), -503, 250, -327);
     Region hub = new Region("void", loc1, loc2);
 
 
