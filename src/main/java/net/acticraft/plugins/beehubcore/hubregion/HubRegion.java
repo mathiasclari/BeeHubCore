@@ -23,17 +23,13 @@ public class HubRegion implements Listener {
     @EventHandler
     public void onRegionEnter(PlayerMoveEvent event) {
         List<Region> VseRegjeNaLokaciji =  Regions.getRegionsInLocation(event.getPlayer().getLocation());
-    if(VseRegjeNaLokaciji.contains("hub")){
+    if(VseRegjeNaLokaciji.contains(hub)){
 
         }
     }
 
     @EventHandler
     public void leave(PlayerExitRegionEvent event) {
-        if(event.getPlayer().hasPermission("neki")){
-
-        } else {
             event.setCanceled(true);
-        }
     }
 }

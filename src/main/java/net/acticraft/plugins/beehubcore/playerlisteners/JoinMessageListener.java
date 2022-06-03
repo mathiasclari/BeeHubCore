@@ -1,5 +1,6 @@
 package net.acticraft.plugins.beehubcore.playerlisteners;
 
+import net.acticraft.plugins.beehubcore.BeeHubCore;
 import net.md_5.bungee.api.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
@@ -15,7 +16,7 @@ public class JoinMessageListener implements Listener {
     @EventHandler
     private void onJoin(PlayerJoinEvent e){
         Player p = e.getPlayer();
-        e.setJoinMessage(ChatColor.of(new Color(61, 145, 255))+"» "+ChatColor.of(new Color(241, 152, 35))+ p.getDisplayName()+ ChatColor.of(new Color(130, 139, 147))+ " has entered the hub!");
+        e.setJoinMessage(ChatColor.of("#738291")+"» "+ChatColor.of("#FFBF00")+ p.getDisplayName()+ ChatColor.of("#F28C28")+ " has entered the " + BeeHubCore.getInstance().servername);
         Location l = p.getWorld().getSpawnLocation();
         p.teleport(l);
 
@@ -24,6 +25,6 @@ public class JoinMessageListener implements Listener {
     @EventHandler
     private void onLeave(PlayerQuitEvent e1){
         Player p = e1.getPlayer();
-        e1.setQuitMessage(ChatColor.of(new Color(0, 141, 183))+"» "+ChatColor.of(new Color(241, 152, 35))+ p.getDisplayName()+ ChatColor.of(new Color(130, 139, 147))+ " left the hub!");
+        e1.setQuitMessage(ChatColor.of("#738291")+"» "+ChatColor.of("#FFBF00")+ p.getDisplayName()+ ChatColor.of("#F28C28")+ " left!");
     }
 }
