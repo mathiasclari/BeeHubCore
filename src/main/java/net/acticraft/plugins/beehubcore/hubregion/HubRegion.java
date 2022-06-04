@@ -30,6 +30,12 @@ public class HubRegion implements Listener {
 
     @EventHandler
     public void leave(PlayerExitRegionEvent event) {
+
+        List<Region> VseRegjeNaLokaciji =  Regions.getRegionsInLocation(event.getPlayer().getLocation());
+        if(VseRegjeNaLokaciji.contains(hub)){
+
             event.setCanceled(true);
+
+        }
     }
 }
