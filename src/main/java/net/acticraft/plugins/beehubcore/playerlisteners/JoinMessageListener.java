@@ -25,6 +25,6 @@ public class JoinMessageListener implements Listener {
     @EventHandler
     private void onLeave(PlayerQuitEvent e1){
         Player p = e1.getPlayer();
-        e1.setQuitMessage(ChatColor.of("#738291")+"» "+ChatColor.of("#FFBF00")+ p.getDisplayName()+ ChatColor.of("#F28C28")+ " left!");
+        e1.setQuitMessage(ChatColor.of("#738291")+"» "+ChatColor.of("#FFBF00")+ p.getDisplayName()+ ChatColor.of("#F28C28")+ " left! ");
     }
 }
