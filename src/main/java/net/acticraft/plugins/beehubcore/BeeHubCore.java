@@ -9,6 +9,7 @@ import net.acticraft.plugins.beehubcore.guis.SMPCategory;
 import net.acticraft.plugins.beehubcore.guis.Tempmenu;
 import net.acticraft.plugins.beehubcore.hubregion.HubRegion;
 import net.acticraft.plugins.beehubcore.playerlisteners.JoinMessageListener;
+import net.acticraft.plugins.beehubcore.ranksbenefits.FlightCommand;
 import net.acticraft.plugins.beehubcore.scoreboard.ScoreBoard;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
@@ -40,6 +41,7 @@ public final class BeeHubCore extends JavaPlugin {
         //getCommand("gamemenu").setExecutor(new GameMenuGUI());
         //getCommand("survivalc").setExecutor(new SMPCategory());
         getCommand("gamemenu").setExecutor(new Tempmenu());
+        getCommand("fly").setExecutor(new FlightCommand());
 
         Location loc1 = new Location(Bukkit.getWorld("world"), 193, 0, -369);
         Location loc2 = new Location(Bukkit.getWorld("world"), -503, 250, 327);
