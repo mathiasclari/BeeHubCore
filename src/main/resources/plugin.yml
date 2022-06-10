@@ -7,4 +7,5 @@ depend: [HoneyAPI]
 commands:
   gamemenu:
   survivalc:
-  fly:
+  pfly:
+    aliases: [pflight]

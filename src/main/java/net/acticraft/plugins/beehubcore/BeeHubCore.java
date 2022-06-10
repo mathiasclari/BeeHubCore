@@ -41,7 +41,7 @@ public final class BeeHubCore extends JavaPlugin {
         //getCommand("gamemenu").setExecutor(new GameMenuGUI());
         //getCommand("survivalc").setExecutor(new SMPCategory());
         getCommand("gamemenu").setExecutor(new Tempmenu());
-        getCommand("fly").setExecutor(new FlightCommand());
+        getCommand("pfly").setExecutor(new FlightCommand());
 
         Location loc1 = new Location(Bukkit.getWorld("world"), 193, 0, -369);
         Location loc2 = new Location(Bukkit.getWorld("world"), -503, 250, 327);
