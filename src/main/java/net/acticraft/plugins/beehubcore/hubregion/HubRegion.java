@@ -8,6 +8,7 @@ import org.bukkit.event.Listener;
 
 public class HubRegion implements Listener {
 
+
     @EventHandler
     public void leave(PlayerExitRegionEvent event) {
         if(event.getFrom().getName().equals("hub")) {
@@ -17,4 +18,7 @@ public class HubRegion implements Listener {
            event.setCanceled(true);
         }
     }
+
+
+
 }

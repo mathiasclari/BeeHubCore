@@ -67,6 +67,7 @@ public class ScoreBoard implements Listener {
                 "",
                 ChatColor.of("#738291")+""+ChatColor.BOLD+"| "+ChatColor.of("#F28C28")+""+ChatColor.BOLD+"Server: " + ChatColor.of("#FAD5A5")+ BeeHubCore.getInstance().serverid,
                 ChatColor.of("#738291")+""+ChatColor.BOLD+"| "+ChatColor.of("#F28C28")+""+ChatColor.BOLD+"Lobby: " + ChatColor.of("#FAD5A5")+BeeHubCore.getInstance().servername,
+                ChatColor.of("#738291")+""+ChatColor.BOLD+"| "+ChatColor.of("#F28C28")+""+ChatColor.BOLD+"Time: " + ChatColor.of("#FAD5A5")+BeeHubCore.getInstance().prefix,
                 "",
                 ChatColor.of("#FFBF00")+""+ChatColor.BOLD + "discord.gg/mcbee"
 
