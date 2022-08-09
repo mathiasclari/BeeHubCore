@@ -18,6 +18,7 @@ public class Events implements Listener {
     ItemStack menu = new ItemStack(Material.HEART_OF_THE_SEA, 1);
 
 
+
     @EventHandler
     public void WaterDamage(EntityDamageEvent e) {
         if(e.getCause() == EntityDamageEvent.DamageCause.DROWNING) {
@@ -33,7 +34,11 @@ public class Events implements Listener {
         e.getPlayer().setHealthScale(12);
         e.getPlayer().setFoodLevel(20);
         e.getPlayer().getWorld().setDifficulty(Difficulty.PEACEFUL);
+<<<<<<< HEAD
         e.getPlayer().setVelocity(Vector.getRandom().multiply(1.9));
+=======
+        e.getPlayer().setVelocity(Vector.getRandom().multiply(1.6));
+>>>>>>> 53598ac0b2f721b6175dc76b13be51b2b666033f
         p.setInvulnerable(true);
 
     }
