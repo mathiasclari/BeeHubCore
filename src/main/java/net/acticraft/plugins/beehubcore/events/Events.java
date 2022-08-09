@@ -30,10 +30,10 @@ public class Events implements Listener {
         Player p = e.getPlayer();
 
         e.getPlayer().setLevel(2022);
-        e.getPlayer().setHealthScale(10);
+        e.getPlayer().setHealthScale(12);
         e.getPlayer().setFoodLevel(20);
         e.getPlayer().getWorld().setDifficulty(Difficulty.PEACEFUL);
-        e.getPlayer().setVelocity(Vector.getRandom().multiply(1.5));
+        e.getPlayer().setVelocity(Vector.getRandom().multiply(1.9));
         p.setInvulnerable(true);
 
     }
